@@ -1,3 +1,6 @@
+go-run:
+	go run cmd/server/main.go
+
 docker-build:
 	docker build -t victorhilario/lab-temperatura-cep:latest .
 
