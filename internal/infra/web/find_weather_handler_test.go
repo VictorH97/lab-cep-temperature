@@ -17,7 +17,19 @@ func TestValidCEP(t *testing.T) {
 	assert.NoError(t, err)
 	assert.True(t, valid)
 
-	valid, err = VerifyValidCEP("123456")
+	valid, err = VerifyValidCEP("12345")
+	assert.NoError(t, err)
+	assert.False(t, valid)
+
+	valid, err = VerifyValidCEP("1234-5")
+	assert.NoError(t, err)
+	assert.False(t, valid)
+
+	valid, err = VerifyValidCEP("12345-5789")
+	assert.NoError(t, err)
+	assert.False(t, valid)
+
+	valid, err = VerifyValidCEP("12-345")
 	assert.NoError(t, err)
 	assert.False(t, valid)
 }

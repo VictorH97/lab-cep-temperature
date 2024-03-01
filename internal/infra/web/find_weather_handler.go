@@ -103,7 +103,7 @@ func (h *FindWeatherHandler) FindWeather(w http.ResponseWriter, r *http.Request)
 }
 
 func VerifyValidCEP(cep string) (bool, error) {
-	valid, err := regexp.MatchString("\\d{5}-*\\d{3}", cep)
+	valid, err := regexp.MatchString("^\\d{5}-*\\d{3}$", cep)
 	if err != nil {
 		return false, err
 	}
