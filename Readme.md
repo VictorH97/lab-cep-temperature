@@ -1,7 +1,6 @@
 Instruções para execução do projeto local com Docker (executar na raiz do projeto):
 
-1. Executar o comando _make docker-build_
-2. Executar o comando _make docker-compose_
+1. Executar o comando _make docker-compose_
 
 Comando para execução do projeto local:
 
